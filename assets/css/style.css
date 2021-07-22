@@ -1,0 +1,788 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Headland One', serif;
+}
+
+body {
+    background: linear-gradient(0deg, rgba(255,53,60,1) 0%, rgba(255,93,36,1) 30%, rgb(255, 189, 74) 100%);
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+
+
+/*
+------------------------------------------
+   SEÇÃO 1
+------------------------------------------
+*/
+
+.sec-1 {
+    background-color: white;
+    width: 32%;
+    height: 100vh;
+    float: left;
+    text-align: center;
+    border-radius: 0% 20% 20% 0% / 0% 50% 50% 0% ;
+}
+
+.block-1 {
+    float: left;
+    width: 80%;
+    height: 75%;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.block-2 {
+    float: left;
+    width: 80%;
+    height: 20%;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #969696;
+    padding: 5px;
+    border-radius: 100%;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events:none;
+}
+
+h1 {
+    color: #5c5c5c;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+h3 {
+    color: #808080;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.circle-link {
+    text-decoration: none;
+}
+
+.circle {
+    background: linear-gradient(0deg, #ff353c 0%, #ff5d24 30%, #ffbd4a 100%);
+    border-radius: 100%;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.circle i {
+    color: white;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+/*
+------------------------------------------
+   SEÇÃO 2
+------------------------------------------
+*/
+
+.sec-2 {
+    width: 13%;
+    height: 100vh;
+    float: left;
+}
+
+.circle-2 {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 8px;
+    cursor: pointer;
+    transition: color 2s;
+}
+
+#circle-1 {position: absolute;top: 10%;transform: translate(20%,0%); animation: circle-1 0.4s backwards;}
+#circle-2 {position: absolute;top: 25%;transform: translate(40%,0%); animation: circle-2 0.5s backwards;}
+#circle-3 {position: absolute;top: 40%;transform: translate(50%,0%); animation: circle-3 0.6s backwards;}
+#circle-4 {position: absolute;top: 55%;transform: translate(40%,0%); animation: circle-4 0.7s backwards;}
+#circle-5 {position: absolute;top: 70%;transform: translate(20%,0%); animation: circle-5 0.8s backwards;}
+
+@keyframes circle-1 {
+    0%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px;}
+    50%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px;}
+    100% {transform: translate(20%,0%);}
+}
+
+@keyframes circle-2 {
+    0%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px;}
+    50%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px;}
+    100% {transform: translate(40%,0%);}
+}
+
+@keyframes circle-3 {
+    0%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px;}
+    50%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px;}
+    100% {transform: translate(50%,0%);}
+}
+
+@keyframes circle-4 {
+    0%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px;}
+    50%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px;}
+    100% {transform: translate(40%,0%);}
+}
+
+@keyframes circle-5 {
+    0%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px;}
+    50%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px;}
+    100% {transform: translate(20%,0%);}
+}
+
+.circle-2 i {
+    color: white;
+    font-size: 25px;
+    line-height: 60px;
+    animation: icircle 1.5s backwards;
+}
+
+@keyframes icircle {
+    0%   {color: rgba(0,0,0,0);}
+    50%  {color: rgba(0,0,0,0);}
+    100% {color: white;}
+}
+
+.circle-active {
+    background: white;
+    width: 64px;
+    height: 64px;
+    border: 0px;
+    animation: circle-active 0.5s forwards;
+}
+
+@keyframes circle-active {
+    0%   {background: rgba(255, 255, 255, 0.3);border: 0px;width: 64px;height: 64px;}
+    100% {background: white;border: 0px;width: 64px;height: 64px;}
+}
+
+.circle-active i {
+    font-size: 35px;
+    line-height: 64px;
+    color: #ff353c;
+    animation: icircle-active 1.5s forwards;
+}
+
+@keyframes icircle-active {
+    0%   {color: rgba(0,0,0,0);}
+    50%  {color: rgba(0,0,0,0);}
+    100% {color: #ff353c;}
+}
+
+/*
+------------------------------------------
+   SEÇÃO 3
+------------------------------------------
+*/
+@keyframes open-main-box {
+    40%  {height: 60vh;}
+    68%  {height: 20vh;}
+    72%  {height: 20vh;}
+    100% {height: 60vh;}
+}
+
+@keyframes open-titulo {
+    0%   {opacity: 1;}
+    20%  {opacity: 0;}
+    80%  {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes open-box {
+    0%   {opacity: 1;}
+    20%  {opacity: 0;}
+    80%  {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+@keyframes open-image {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.sec-3 {
+    width: 55%;
+    height: 100vh;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+
+.main-box {
+    margin: 20vh 0;
+    background: linear-gradient(0deg, #ffffff00 0%, #ffffff60 100%);
+    width: 80%;
+    height: 60vh;
+    float: left;
+}
+
+.main-box-header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 30%;
+}
+
+.borda {
+    width: 96%;
+    margin: 2%;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate(0%,0%);
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events:none;
+}
+
+.main-box-titulo {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 50px;
+    position: absolute;
+}
+
+.main-box-body {
+    color: white;
+    width: 80%;
+    height: 66%;
+    padding: 2% 10%;
+}
+
+.main-box-body-container {
+    float: left;
+    width: 97%;
+    margin: 5px 1%;
+    margin-right: 2%; 
+}
+
+.main-box-body-card {
+    width:100%;
+    height: 220px;
+    overflow: auto;
+    opacity: 1;
+}
+
+.main-box-body-card span {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.bar {
+    background-color: white;
+    float: left;
+    width: 100%;
+    height: 2px;
+    margin: 20px 0px;
+}
+
+.c-10 {
+    float: left;
+    width: 100%;
+}
+
+.c-7 {
+    float: left;
+    width: 70%;
+}
+
+.c-6 {
+    float: left;
+    width: 60%;
+}
+
+.c-5 {
+    float: left;
+    width: 50%;
+}
+
+.c-4 {
+    float: left;
+    width: 40%;
+}
+
+.c-3 {
+    float: left;
+    width: 30%;
+}
+/*
+------------------------------------------
+   PROFILE
+------------------------------------------
+*/
+
+#screen-1 h4 {
+    margin: 0px;
+    padding-left: 0px;
+}
+
+#screen-1 .main-box-body-container h4 {
+    margin-bottom: 10px;
+}
+
+#screen-1 .main-box-body-container p {
+    margin: 0px 0px;
+    margin-bottom: 5px;
+    font-size: 8px;
+}
+
+#screen-1 .main-box-body-container a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#screen-1 .main-box-body-container i {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+
+#screen-1 .main-box-body-container img {
+    float: left;
+    width: 90%;
+    height: auto;
+}
+
+#screen-1 .main-box-body-container .text-bio {
+    text-indent: 3em;
+    font-size: 10px;
+    text-align: justify;
+    margin: 0px 20px 5px 0px;
+}
+/*
+------------------------------------------
+   PROFILE
+------------------------------------------
+*/
+
+
+#screen-3 .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    float: left;
+    width: 97%;
+    height:160px;
+    margin: 5px 1%;
+    margin-right: 2%;
+    border-radius: 10px;
+}
+
+/*
+------------------------------------------
+   HARD SKILLS
+------------------------------------------
+*/
+
+#screen-4 .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    float: left;
+    width: 97%;
+    height:80px;
+    margin: 5px 1%;
+    margin-right: 2%;
+    border-radius: 10px;
+}
+
+#screen-4 .card:first-child {
+    margin-top: 0px;
+}
+
+#screen-4 .card:last-child {
+    margin-bottom: 0px;
+}
+
+.text-card h4 {
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 5px
+}
+
+.text-card p {
+    font-size: 12px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-right: 20px;
+}
+.image-card {
+    float: left;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height:80px;
+}
+
+.image-card img {
+    width: auto;
+    height:50px;
+    margin: auto 0px;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events:none;
+}
+
+.text-card {
+    float: left;
+    width: 80%;
+    height:80px;
+}
+
+.skill-sec {
+    float: left;
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.skill-count {
+    float: left;
+    width: 30px;
+    height:10px;
+    margin-left: 5px;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+
+.skill-active {
+    background-color: white;
+    float: left;
+    border-radius: 50px;
+    width: 26px;
+    height:6px;
+    margin: 2px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+/*
+------------------------------------------
+   SEÇÃO 1
+------------------------------------------
+*/
+
+    .sec-1 {
+        width: 100%;
+        height: auto;
+        padding: 20px 0px;
+        float: left;
+        text-align: center;
+        border-radius: 0% 0% 50% 50% / 0% 0% 12% 12%;
+    }
+
+    .block-1 {
+        width: 100%;
+        float: left;
+        text-align: center;
+    }
+
+    .block-2 {
+        width: 100%;
+        padding-top: 10px;
+        float: left;
+        text-align: center;
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+    }
+
+    .foto-perfil {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        margin-top: 0px;
+    }
+
+    h1 {
+        color: #5c5c5c;
+        font-weight: bold;
+        font-size: 25px;
+        margin-top: 15px;
+    }
+
+    h3 {
+        color: #808080;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .circle {
+        background: linear-gradient(0deg, rgba(255,53,60,1) 0%, rgba(255,93,36,1) 30%, rgb(255, 189, 74) 100%);
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .circle i {
+        color: white;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+/*
+------------------------------------------
+   SEÇÃO 2
+------------------------------------------
+*/
+
+    .sec-2 {
+        width: 100%;
+        height: 10vh;
+        float: left;
+        display: flex;
+        justify-content: center;
+    }
+
+    .circle-2 {
+        border-radius: 100%;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        margin: 5px;
+        margin-top: 20px;
+    }
+
+    .circle-2 i {
+        color: #ff5d24;
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    #circle-1 {position: initial;transform: translate(0%,-20%); animation: circle-1 0.6s forwards;}
+    #circle-2 {position: initial;transform: translate(0%,-10%); animation: circle-2 0.8s forwards;}
+    #circle-3 {position: initial;transform: translate(0%,-5%); animation: circle-3 0.9s forwards;}
+    #circle-4 {position: initial;transform: translate(0%,-10%); animation: circle-4 0.8s forwards;}
+    #circle-5 {position: initial;transform: translate(0%,-20%); animation: circle-5 0.6s forwards;}
+    
+    @keyframes circle-1 {
+        0%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px;}
+        50%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px;}
+        100% {transform: translate(-20%,-20%);}
+    }
+    
+    @keyframes circle-2 {
+        0%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px;}
+        50%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px;}
+        100% {transform: translate(-10%,-10%);}
+    }
+    
+    @keyframes circle-3 {
+        0%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px;}
+        50%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px;}
+        100% {transform: translate(0%,-5%);}
+    }
+    
+    @keyframes circle-4 {
+        0%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px;}
+        50%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px;}
+        100% {transform: translate(10%,-10%);}
+    }
+    
+    @keyframes circle-5 {
+        0%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px;}
+        50%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px;}
+        100% {transform: translate(20%,-20%);}
+    }
+
+    .circle-active i {
+        color: #ff5d24;
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+/*
+------------------------------------------
+   SEÇÃO 3
+------------------------------------------
+*/
+
+    .sec-3 {
+        width: 100%;
+        height: 60vh;
+        margin: 30px 0px;
+        float: left;
+    }
+
+    .main-box {
+        margin: 5px 0;
+        background: linear-gradient(0deg, #ffffff00 0%, #ffffff60 100%);
+        width: 90%;
+        height: 60vh;
+        float: left;
+    }
+
+    .main-box-body {
+        color: white;
+        width: 90%;
+        height: 66%;
+        padding: 2% 5%;
+    }
+    
+    .main-box-body-card h4 {
+        font-weight: bold;
+        font-size: 12px;
+        padding-left: 0px;
+        padding-top: 5px;
+        text-align: center;
+    }
+
+    .main-box-body-card p {
+        font-size: 8px;
+        padding-top: 15px 0px;
+        padding-bottom: 0px;
+        text-align: center;
+    }
+    
+    .main-box-body-card span {
+        font-weight: normal;
+        display: block;
+        font-size: 6px;
+    }
+
+/*
+------------------------------------------
+   HARD SKILL
+------------------------------------------
+*/
+
+    .image-card {
+        float: left;
+        display: flex;
+        justify-content: center;
+        width: 30%;
+        height:80px;
+    }
+    
+    .image-card img {
+        width: 70%;
+        height: auto;
+        margin: auto 0px;
+    }
+
+    .text-card {
+        float: left;
+        width: 70%;
+        height:80px;
+        margin: 0px;
+    }
+    
+    .text-card h4 {
+        font-weight: bold;
+        font-size: 12px;
+        padding-left: 0px;
+        padding-top: 5px;
+        text-align: center;
+    }
+
+    .text-card p {
+        font-size: 8px;
+        padding-top: 15px 0px;
+        padding-bottom: 0px;
+        text-align: center;
+    }
+    
+    .text-card span {
+        font-weight: normal;
+        display: block;
+        font-size: 6px;
+    }
+    
+    .skill-card {
+        margin: 0px;
+        width: 100%;
+    }
+    
+    .skill-sec {
+        display: flex;
+        justify-content:center;
+        margin: 5px 0px;
+        margin-bottom: 0px;
+        width: 100%;
+    }
+
+    .skill-count {
+        width: 15px;
+        height:5px;
+        margin: 0px 3px;
+        border-radius: 50px;
+        border: 1px solid white;
+    }
+    
+    .skill-active {
+        background-color: white;
+        border-radius: 50px;
+        width: 13px;
+        height:3px;
+        margin: 1px;
+    }
+    
+}
