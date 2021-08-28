@@ -94,7 +94,8 @@ h3 {
 }
 
 .circle {
-    background: linear-gradient(0deg, #ff353c 0%, #ff5d24 30%, #ffbd4a 100%);
+    background-image: url("../img/circulo.png");
+    background-size: cover;
     border-radius: 100%;
     text-align: center;
     width: 50px;
@@ -104,7 +105,9 @@ h3 {
 }
 
 .circle i {
-    color: white;
+    background: -webkit-linear-gradient(45deg, rgb(255,53,60) 0%, rgb(255,93,36,1) 50%, rgb(255, 189, 74) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 25px;
     line-height: 50px;
 }
@@ -191,12 +194,6 @@ h3 {
     width: 64px;
     height: 64px;
     border: 0px;
-    animation: circle-active 0.5s forwards;
-}
-
-@keyframes circle-active {
-    0%   {background: rgba(255, 255, 255, 0.3);border: 0px;width: 64px;height: 64px;}
-    100% {background: white;border: 0px;width: 64px;height: 64px;}
 }
 
 .circle-active i {
@@ -210,6 +207,69 @@ h3 {
     0%   {color: rgba(0,0,0,0);}
     50%  {color: rgba(0,0,0,0);}
     100% {color: #ff353c;}
+}
+
+/*
+|--------------|
+|   animação   |
+|--------------|
+*/
+
+.circle-2-f {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.circle-2-f i {
+    color: white;
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.circle-active-i {
+    background: white;
+    width: 64px;
+    height: 64px;
+    border: 0px;
+}
+
+.circle-active-i i {
+    font-size: 35px;
+    line-height: 64px;
+    color: #ff353c;
+}
+
+.circle-active-f {
+    background: white;
+    width: 64px;
+    height: 64px;
+    border: 0px;
+}
+
+@keyframes circle-active-f {
+    0%   {background-color: rgba(255, 255, 255, 0.3);border: 0px;width: 64px;height: 64px;}
+    50%  {background-color: white;border: 0px;width: 64px;height: 64px;}
+}
+
+.circle-active-f i {
+    font-size: 35px;
+    line-height: 64px;
+}
+
+@keyframes icircle-active-f {
+    0%   {color: white; font-size: 25px;}
+    50%  {color: white; font-size: 25px;}
+    100% {color: #ff353c; font-size: 35px;}
 }
 
 /*
@@ -288,8 +348,23 @@ h3 {
     color: white;
     font-weight: bold;
     font-size: 25px;
-    margin-top: 50px;
+    margin-top: 25px;
     position: absolute;
+    text-align: center;
+}
+
+.main-box-titulo i {
+    color: white;
+    display: block;
+    font-size: 20px;
+}
+
+.main-box-titulo h2 {
+    color: white;
+    display: block;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
 }
 
 .main-box-body {
@@ -355,6 +430,11 @@ h3 {
     float: left;
     width: 30%;
 }
+
+
+.center {
+    text-align: center;
+}
 /*
 ------------------------------------------
    PROFILE
@@ -373,7 +453,7 @@ h3 {
 #screen-1 .main-box-body-container p {
     margin: 0px 0px;
     margin-bottom: 5px;
-    font-size: 8px;
+    font-size: 10px;
 }
 
 #screen-1 .main-box-body-container a {
@@ -517,13 +597,28 @@ h3 {
 }
 
 
-@media only screen and (max-width: 600px) {
+
+
+
+
+
+
+
 
 /*
 ------------------------------------------
-   SEÇÃO 1
+   MOBILE
 ------------------------------------------
 */
+
+
+@media only screen and (max-width: 600px) {
+
+    /*
+    ------------------------------------------
+    SEÇÃO 1
+    ------------------------------------------
+    */
 
     .sec-1 {
         width: 100%;
@@ -573,7 +668,8 @@ h3 {
     }
 
     .circle {
-        background: linear-gradient(0deg, rgba(255,53,60,1) 0%, rgba(255,93,36,1) 30%, rgb(255, 189, 74) 100%);
+        background-image: url("../img/circulo.png");
+        background-size: cover;
         border-radius: 100%;
         width: 40px;
         height: 40px;
@@ -582,16 +678,15 @@ h3 {
     }
 
     .circle i {
-        color: white;
         font-size: 20px;
         line-height: 40px;
     }
 
-/*
-------------------------------------------
-   SEÇÃO 2
-------------------------------------------
-*/
+    /*
+    ------------------------------------------
+    SEÇÃO 2
+    ------------------------------------------
+    */
 
     .sec-2 {
         width: 100%;
@@ -659,11 +754,11 @@ h3 {
         line-height: 40px;
     }
 
-/*
-------------------------------------------
-   SEÇÃO 3
-------------------------------------------
-*/
+    /*
+    ------------------------------------------
+    SEÇÃO 3
+    ------------------------------------------
+    */
 
     .sec-3 {
         width: 100%;
@@ -680,10 +775,29 @@ h3 {
         float: left;
     }
 
+    .main-box-header {
+        height: 20%;
+    }
+
+    .main-box-titulo {
+        margin-top: 20px;
+        position: absolute;
+    }
+
+    .main-box-titulo i {
+        font-size: 15px;
+    }
+
+
+    .main-box-titulo h2 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
     .main-box-body {
         color: white;
         width: 90%;
-        height: 66%;
+        height: 76%;
         padding: 2% 5%;
     }
     
@@ -708,11 +822,11 @@ h3 {
         font-size: 6px;
     }
 
-/*
-------------------------------------------
-   HARD SKILL
-------------------------------------------
-*/
+    /*
+    ------------------------------------------
+    HARD SKILL
+    ------------------------------------------
+    */
 
     .image-card {
         float: left;
