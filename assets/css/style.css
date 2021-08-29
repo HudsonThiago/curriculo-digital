@@ -598,13 +598,6 @@ h3 {
 
 
 
-
-
-
-
-
-
-
 /*
 ------------------------------------------
    MOBILE
@@ -748,10 +741,72 @@ h3 {
         100% {transform: translate(20%,-20%);}
     }
 
+    .circle-active {
+        background: white;
+        width: 44px;
+        height: 44px;
+        border: 0px;
+    }
+
     .circle-active i {
         color: #ff5d24;
         font-size: 25px;
+        line-height: 44px;
+    }
+
+    .circle-2-f {
+        border-radius: 100%;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        margin: 5px;
+        margin-top: 20px;
+    }
+    
+    .circle-2-f i {
+        color: white;
+        font-size: 16px;
         line-height: 40px;
+    }
+    
+    .circle-active-i {
+        background: white;
+        width: 44px;
+        height: 44px;
+        border: 0px;
+    }
+    
+    .circle-active-i i {
+        font-size: 25px;
+        line-height: 44px;
+        color: #ff353c;
+    }
+    
+    .circle-active-f {
+        background: white;
+        border-radius: 100%;
+        text-align: center;
+        width: 44px;
+        height: 44px;
+        display: inline-block;
+        border: 0px;
+    }
+
+    @keyframes circle-active-f {
+        0%   {background-color: rgba(255, 255, 255, 0.3);border: 0px;width: 44px;height: 44px;}
+        50%  {background-color: white;border: 0px;width: 44px;height: 44px;}
+    }
+    
+    .circle-active-f i {
+        font-size: 25px;
+        line-height: 44px;
+    }
+
+    @keyframes icircle-active-f {
+        0%   {color: white; font-size: 25px;}
+        50%  {color: white; font-size: 25px;}
+        100% {color: #ff353c; font-size: 25px;}
     }
 
     /*
