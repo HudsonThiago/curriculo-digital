@@ -2,7 +2,6 @@ window.addEventListener("load", main)
 
 function main(){
     let main_box = document.getElementById('main-box');
-    let box = document.getElementById('box');
     let titulo = document.getElementById('titulo');
     let controle = 0;
     let texto = document.getElementById('texto');
@@ -56,7 +55,7 @@ function main(){
             if (!btn1.classList.contains("circle-active")){
                 if (!(btn1.classList.contains("circle-active-f"))){
                     btn1.classList.add('circle-active-f');
-                    setTimeout(() => transition(screen1), 0);
+                    setTimeout(() => transition(screen1, "Profile", "fa-home"), 0);
                     setTimeout(() => verificacao(btn1), 0);
                     setTimeout(() => btn1.style.animation = "circle-active-f 0.8s forwards", 0);
                     setTimeout(() => i1.style.animation = "icircle-active-f 0.6s forwards", 0);
@@ -84,7 +83,7 @@ function main(){
             controle = 2;
             if (!(btn2.classList.contains("circle-active-f"))){
                 btn2.classList.add('circle-active-f');
-                setTimeout(() => transition(screen2), 0);
+                setTimeout(() => transition(screen2, "Formação", "fa-user-graduate"), 0);
                 setTimeout(() => verificacao(btn2), 0);
                 setTimeout(() => btn2.style.animation = "circle-active-f 0.8s forwards", 0);
                 setTimeout(() => i2.style.animation = "icircle-active-f 0.6s forwards", 0);
@@ -110,7 +109,7 @@ function main(){
             controle = 3;
             if (!(btn3.classList.contains("circle-active-f"))){
                 btn3.classList.add('circle-active-f');
-                setTimeout(() => transition(screen3), 0);
+                setTimeout(() => transition(screen3, "W.I.P", "fa-briefcase"), 0);
                 setTimeout(() => verificacao(btn3), 0);
                 setTimeout(() => btn3.style.animation = "circle-active-f 0.8s forwards", 0);
                 setTimeout(() => i3.style.animation = "icircle-active-f 0.6s forwards", 0);
@@ -136,7 +135,7 @@ function main(){
             controle = 4;
             if (!(btn4.classList.contains("circle-active-f"))){
                 btn4.classList.add('circle-active-f');
-                setTimeout(() => transition(screen4), 0);
+                setTimeout(() => transition(screen4, "Hard skills", "fa-code"), 0);
                 setTimeout(() => verificacao(btn4), 0);
                 setTimeout(() => btn4.style.animation = "circle-active-f 0.8s forwards", 0);
                 setTimeout(() => i4.style.animation = "icircle-active-f 0.6s forwards", 0);
@@ -162,7 +161,7 @@ function main(){
             controle = 5;
             if (!(btn5.classList.contains("circle-active-f"))){
                 btn5.classList.add('circle-active-f');
-                setTimeout(() => transition(screen5), 0);
+                setTimeout(() => transition(screen5, "W.I.P", "fa-award"), 0);
                 setTimeout(() => verificacao(btn5), 0);
                 setTimeout(() => btn5.style.animation = "circle-active-f 0.8s forwards", 0);
                 setTimeout(() => i5.style.animation = "icircle-active-f 0.6s forwards", 0);
@@ -214,16 +213,23 @@ function main(){
             }
         }
 
-        function transition(screen){
-            main_box.style.animation = "open-main-box 1s forwards"
-            screen.style.animation = "open-box 1s forwards"
-            setTimeout(() => screen1.style.display = "none", 500);
-            setTimeout(() => screen2.style.display = "none", 500);
-            setTimeout(() => screen3.style.display = "none", 500);
-            setTimeout(() => screen4.style.display = "none", 500);
-            setTimeout(() => screen5.style.display = "none", 500);
-            setTimeout(() => screen.style.display = "block", 500);
+        function transition(screen, texto, icon){
+            screen1.style.display = "none";
+            screen2.style.display = "none";
+            screen3.style.display = "none";
+            screen4.style.display = "none";
+            screen5.style.display = "none";
+            screen.style.display = "block";
+            titulo.children[1].innerText = texto;
+            titulo.children[0].classList.remove("fa-home");
+            titulo.children[0].classList.remove("fa-user-graduate");
+            titulo.children[0].classList.remove("fa-briefcase");
+            titulo.children[0].classList.remove("fa-code");
+            titulo.children[0].classList.remove("fa-award");
+            titulo.children[0].classList.add(icon);
+
         }
+
     }
 }
 

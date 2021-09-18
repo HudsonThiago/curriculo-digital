@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(0deg, rgba(255,53,60,1) 0%, rgba(255,93,36,1) 30%, rgb(255, 189, 74) 100%);
+    background: linear-gradient(0deg, var(--red-100) 0%, var(--orange-100) 30%, var(--yellow-100) 100%);
     background-repeat: no-repeat;
     background-size: auto 100vh;
     background-size: cover;
@@ -33,7 +33,7 @@ body {
 */
 
 .sec-1 {
-    background-color: white;
+    background-color: var(--white-100);
     width: 32%;
     height: 100vh;
     float: left;
@@ -105,7 +105,7 @@ h3 {
 }
 
 .circle i {
-    background: -webkit-linear-gradient(45deg, rgb(255,53,60) 0%, rgb(255,93,36,1) 50%, rgb(255, 189, 74) 100%);
+    background: linear-gradient(0deg, var(--red-100) 0%, var(--orange-100) 30%, var(--yellow-100) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 25px;
@@ -147,9 +147,9 @@ h3 {
 #circle-5 {position: absolute;top: 70%;transform: translate(20%,0%); animation: circle-5 0.8s backwards;}
 
 @keyframes circle-1 {
-    0%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px;}
-    50%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px;}
-    100% {transform: translate(20%,0%);}
+    0%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px; box-shadow: 2px 5px 5px rgba(0,0,0,0);}
+    50%   {transform: translate(200%,0%); background-color: rgba(0,0,0,0); border: 0px; box-shadow: 2px 5px 5px rgba(0,0,0,0);}
+    100% {transform: translate(20%,0%); box-shadow: 2px 5px 5px rgba(0,0,0,0.3);}
 }
 
 @keyframes circle-2 {
@@ -177,7 +177,7 @@ h3 {
 }
 
 .circle-2 i {
-    color: white;
+    color: var(--white-100);
     font-size: 25px;
     line-height: 60px;
     animation: icircle 1.5s backwards;
@@ -186,11 +186,12 @@ h3 {
 @keyframes icircle {
     0%   {color: rgba(0,0,0,0);}
     50%  {color: rgba(0,0,0,0);}
-    100% {color: white;}
+    100% {color: var(--white-100);}
 }
 
 .circle-active {
-    background: white;
+    background: var(--white-100);
+    box-shadow: 2px 5px 5px rgba(0,0,0,0.3);
     width: 64px;
     height: 64px;
     border: 0px;
@@ -199,14 +200,14 @@ h3 {
 .circle-active i {
     font-size: 35px;
     line-height: 64px;
-    color: #ff353c;
+    color: var(--red-100);
     animation: icircle-active 1.5s forwards;
 }
 
 @keyframes icircle-active {
     0%   {color: rgba(0,0,0,0);}
     50%  {color: rgba(0,0,0,0);}
-    100% {color: #ff353c;}
+    100% {color: var(--red-100);}
 }
 
 /*
@@ -231,13 +232,13 @@ h3 {
 }
 
 .circle-2-f i {
-    color: white;
+    color: var(--white-100);
     font-size: 25px;
     line-height: 60px;
 }
 
 .circle-active-i {
-    background: white;
+    background: var(--white-100);
     width: 64px;
     height: 64px;
     border: 0px;
@@ -246,11 +247,12 @@ h3 {
 .circle-active-i i {
     font-size: 35px;
     line-height: 64px;
-    color: #ff353c;
+    color: var(--red-100);
 }
 
 .circle-active-f {
-    background: white;
+    background: var(--white-100);
+    box-shadow: 2px 5px 5px rgba(0,0,0,0.3);
     width: 64px;
     height: 64px;
     border: 0px;
@@ -258,18 +260,18 @@ h3 {
 
 @keyframes circle-active-f {
     0%   {background-color: rgba(255, 255, 255, 0.3);border: 0px;width: 64px;height: 64px;}
-    50%  {background-color: white;border: 0px;width: 64px;height: 64px;}
+    50%  {background-color: var(--white-100);border: 0px;width: 64px;height: 64px;}
 }
 
 .circle-active-f i {
-    font-size: 35px;
+    font-size: 25px;
     line-height: 64px;
 }
 
 @keyframes icircle-active-f {
-    0%   {color: white; font-size: 25px;}
-    50%  {color: white; font-size: 25px;}
-    100% {color: #ff353c; font-size: 35px;}
+    0%   {color: var(--pink-100); font-size: 25px;}
+    50%  {color: var(--pink-100); font-size: 25px;}
+    100% {color: var(--red-100); font-size: 35px;}
 }
 
 /*
@@ -277,32 +279,6 @@ h3 {
    SEÇÃO 3
 ------------------------------------------
 */
-@keyframes open-main-box {
-    40%  {height: 60vh;}
-    68%  {height: 20vh;}
-    72%  {height: 20vh;}
-    100% {height: 60vh;}
-}
-
-@keyframes open-titulo {
-    0%   {opacity: 1;}
-    20%  {opacity: 0;}
-    80%  {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-@keyframes open-box {
-    0%   {opacity: 1;}
-    20%  {opacity: 0;}
-    80%  {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-
-@keyframes open-image {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
 
 .sec-3 {
     width: 55%;
@@ -345,7 +321,7 @@ h3 {
 }
 
 .main-box-titulo {
-    color: white;
+    color: var(--white-100);
     font-weight: bold;
     font-size: 25px;
     margin-top: 25px;
@@ -354,13 +330,13 @@ h3 {
 }
 
 .main-box-titulo i {
-    color: white;
+    color: var(--white-100);
     display: block;
     font-size: 20px;
 }
 
 .main-box-titulo h2 {
-    color: white;
+    color: var(--white-100);
     display: block;
     font-weight: bold;
     font-size: 25px;
@@ -368,7 +344,7 @@ h3 {
 }
 
 .main-box-body {
-    color: white;
+    color: var(--white-100);
     width: 80%;
     height: 66%;
     padding: 2% 10%;
@@ -394,7 +370,7 @@ h3 {
 }
 
 .bar {
-    background-color: white;
+    background-color: var(--white-100);
     float: left;
     width: 100%;
     height: 2px;
@@ -457,7 +433,7 @@ h3 {
 }
 
 #screen-1 .main-box-body-container a {
-    color: white;
+    color: var(--white-100);
     text-decoration: none;
     cursor: pointer;
 }
@@ -584,11 +560,11 @@ h3 {
     height:10px;
     margin-left: 5px;
     border-radius: 50px;
-    border: 1px solid white;
+    border: 1px solid var(--white-100);
 }
 
 .skill-active {
-    background-color: white;
+    background-color: var(--white-100);
     float: left;
     border-radius: 50px;
     width: 26px;
@@ -604,6 +580,14 @@ h3 {
 ------------------------------------------
 */
 
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
 
 @media only screen and (max-width: 600px) {
 
@@ -612,6 +596,14 @@ h3 {
     SEÇÃO 1
     ------------------------------------------
     */
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
 
     .sec-1 {
         width: 100%;
@@ -700,7 +692,6 @@ h3 {
     }
 
     .circle-2 i {
-        color: #ff5d24;
         font-size: 16px;
         line-height: 40px;
     }
@@ -712,8 +703,8 @@ h3 {
     #circle-5 {position: initial;transform: translate(0%,-20%); animation: circle-5 0.6s forwards;}
     
     @keyframes circle-1 {
-        0%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px;}
-        50%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px;}
+        0%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px; box-shadow: 2px 5px 5px rgba(0,0,0,0);}
+        50%   {transform: translate(0%,40%); background-color: rgba(0,0,0,0); border: 0px; box-shadow: 2px 5px 5px rgba(0,0,0,0);}
         100% {transform: translate(-20%,-20%);}
     }
     
@@ -742,19 +733,24 @@ h3 {
     }
 
     .circle-active {
-        background: white;
+        background: var(--white-100);
         width: 44px;
         height: 44px;
         border: 0px;
     }
 
     .circle-active i {
-        color: #ff5d24;
+        color: var(--red-100);
         font-size: 25px;
         line-height: 44px;
     }
 
     .circle-2-f {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-top: 2px solid rgba(255, 255, 255, 0.5);
+        border-left: 2px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+        border-right: 2px solid rgba(0, 0, 0, 0.2);
         border-radius: 100%;
         text-align: center;
         width: 40px;
@@ -765,13 +761,13 @@ h3 {
     }
     
     .circle-2-f i {
-        color: white;
+        color: var(--white-100);
         font-size: 16px;
         line-height: 40px;
     }
     
     .circle-active-i {
-        background: white;
+        background: var(--white-100);
         width: 44px;
         height: 44px;
         border: 0px;
@@ -780,11 +776,11 @@ h3 {
     .circle-active-i i {
         font-size: 25px;
         line-height: 44px;
-        color: #ff353c;
+        color: var(--red-100);
     }
     
     .circle-active-f {
-        background: white;
+        background: var(--white-100);
         border-radius: 100%;
         text-align: center;
         width: 44px;
@@ -795,7 +791,7 @@ h3 {
 
     @keyframes circle-active-f {
         0%   {background-color: rgba(255, 255, 255, 0.3);border: 0px;width: 44px;height: 44px;}
-        50%  {background-color: white;border: 0px;width: 44px;height: 44px;}
+        50%  {background-color: var(--white-100);border: 0px;width: 44px;height: 44px;}
     }
     
     .circle-active-f i {
@@ -804,10 +800,17 @@ h3 {
     }
 
     @keyframes icircle-active-f {
-        0%   {color: white; font-size: 25px;}
-        50%  {color: white; font-size: 25px;}
-        100% {color: #ff353c; font-size: 25px;}
+        0%   {color: var(--white-100); font-size: 16px;}
+        50%  {color: var(--white-100); font-size: 16px;}
+        100% {color: var(--red-100); font-size: 25px;}
     }
+
+    #circle-1 {position: initial;transform: translate(-20%,-20%);}
+    #circle-2 {position: initial;transform: translate(-10%,-10%);}
+    #circle-3 {position: initial;transform: translate(0%,-5%);}
+    #circle-4 {position: initial;transform: translate(10%,-10%);}
+    #circle-5 {position: initial;transform: translate(20%,-20%);}
+    
 
     /*
     ------------------------------------------
@@ -831,7 +834,7 @@ h3 {
     }
 
     .main-box-header {
-        height: 20%;
+        height: 22%;
     }
 
     .main-box-titulo {
@@ -840,7 +843,7 @@ h3 {
     }
 
     .main-box-titulo i {
-        font-size: 15px;
+        font-size: 25px;
     }
 
 
@@ -850,10 +853,14 @@ h3 {
     }
 
     .main-box-body {
-        color: white;
-        width: 90%;
-        height: 76%;
+        color: var(--white-100);
+        width: 88%;
+        height: 100%;
         padding: 2% 5%;
+    }
+    
+    .main-box-body-card {
+        height: 320px;
     }
     
     .main-box-body-card h4 {
@@ -943,11 +950,11 @@ h3 {
         height:5px;
         margin: 0px 3px;
         border-radius: 50px;
-        border: 1px solid white;
+        border: 1px solid var(--white-100);
     }
     
     .skill-active {
-        background-color: white;
+        background-color: var(--white-100);
         border-radius: 50px;
         width: 13px;
         height:3px;
