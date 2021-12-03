@@ -135,7 +135,7 @@ function main(){
             controle = 4;
             if (!(btn4.classList.contains("circle-active-f"))){
                 btn4.classList.add('circle-active-f');
-                setTimeout(() => transition(screen4, "Hard skills", "fa-code"), 0);
+                setTimeout(() => transition(screen4, "Tecnologias", "fa-code"), 0);
                 setTimeout(() => verificacao(btn4), 0);
                 setTimeout(() => btn4.style.animation = "circle-active-f 0.8s forwards", 0);
                 setTimeout(() => i4.style.animation = "icircle-active-f 0.6s forwards", 0);
